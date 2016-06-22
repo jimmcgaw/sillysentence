@@ -3,7 +3,7 @@ import sys
 import site
 
 site.addsitedir('~/.virtualenvs/sillysentence/local/lib/python2.7/site-packages')
-parent_dir = os.path.abspath(os.path.join(os.path.dirname(__file__),".."))
+parent_dir = os.path.join(os.path.dirname(__file__))
 sys.path.append(parent_dir)
 
 # Activate your virtual env
