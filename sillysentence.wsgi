@@ -3,7 +3,7 @@ import sys
 import site
 
 site.addsitedir('~/.virtualenvs/sillysentence/local/lib/python2.7/site-packages')
-parent_dir = os.path.join(os.path.dirname(__file__))
+parent_dir = os.path.dirname(__file__)
 sys.path.append(parent_dir)
 
 # Activate your virtual env
@@ -14,4 +14,4 @@ except IOError:
     pass
 
 
-from sillysentence import app as application
+from app import app as application

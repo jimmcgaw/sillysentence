@@ -1,12 +1,15 @@
 import pickle
 import random
+import os
 
 def random_subject():
-    with open('./data/subjects.pickle', 'rb') as f:
+    filepath = os.path.join(os.path.dirname(__file__), 'data/subjects.pickle')
+    with open(filepath, 'rb') as f:
         subjects = pickle.load(f)
         return random.choice(subjects)
 
 def random_predicate():
-    with open('./data/predicates.pickle', 'rb') as f:
+    filepath = os.path.join(os.path.dirname(__file__), 'data/predicates.pickle')
+    with open(filepath, 'rb') as f:
         predicates = pickle.load(f)
         return random.choice(predicates)
